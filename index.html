@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIGHSLOT - $HIGHSLOT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(135deg, #420069, #2c2c54);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 18px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    .token-info-box {
+      border: 2px solid #fff;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      padding: 30px 20px;
+      border-radius: 16px;
+      background-color: #34123f;
+    }
+
+    .token-info-box h3 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    .token-info-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 40px;
+      text-align: left;
+      justify-items: start;
+      font-size: 16px;
+    }
+
+    .contract-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      grid-column: span 2;
+      font-size: 16px;
+    }
+
+    .contract-label {
+      font-weight: bold;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      overflow: visible;
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .copy-btn:hover {
+      opacity: 0.75;
+    }
+
+    .copy-btn svg {
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.8;
+      overflow: visible;
+      display: block;
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 0;
+    }
+
+    .images img {
+      width: 400px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px #000000aa;
+    }
+
+    .info-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 60px auto;
+      flex-wrap: wrap;
+    }
+
+    .info-box {
+      background: #34123f;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00000066;
+      font-size: 20px;
+      min-width: 250px;
+    }
+
+    .info-box span {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .tokenomics {
+      background: #34123f;
+      padding: 80px 20px;
+      color: #fff;
+    }
+
+    .tokenomics h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .tokenomics-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .tokenomics-text {
+      background: #1c2d44;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .tokenomics-text h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .tokenomics-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .tokenomics img {
+      width: 280px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #00000066;
+    }
+
+    .socials {
+      margin: 60px 0;
+    }
+
+    .socials a {
+      margin: 0 20px;
+      font-size: 20px;
+      background: #fff;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      background: #f39c12;
+      color: #fff;
+    }
+
+    footer {
+      padding: 30px;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚬 HIGHSLOT - $HIGHSLOT</h1>
+    <p>The dopest memecoin on the Solana block. Fueled by vibes, powered by the dankest bear on chain. No roadmap. No promises. Just pure high-life degeneracy. If you're not HIGH, you're not in.</p>
+
+    <!-- TOKEN INFO BOX START -->
+    <div class="token-info-box">
+      <h3>TOKEN INFO</h3>
+      <div class="token-info-content">
+        <div><strong>Name:</strong> HighSlot</div>
+        <div><strong>Ticker:</strong> $HIGHSLOT</div>
+        <div><strong>Total Supply:</strong> 1,000,000,000</div>
+        <div><strong>Chain:</strong> Solana</div>
+        <div class="contract-row">
+          <span class="contract-label">CA:</span>
+          <span class="contract-address" id="contract" data-full="ByuoShEtPjFg34HEDyyZoNBF">ByuSh...yZoNBF</span>
+          <button class="copy-btn" onclick="copyContract()" aria-label="Copy Contract">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy" aria-hidden="true" focusable="false">
+              <rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- TOKEN INFO BOX END -->
+  </header>
+
+  <section class="images">
+    <img src="highslot1.png" alt="HighSlot Bear 1" />
+    <img src="highslot2.png" alt="HighSlot Bear 2" />
+  </section>
+
+  <section class="info-boxes">
+    <div class="info-box">
+      <span>🔒 Mint Authority</span>
+      Disabled
+    </div>
+    <div class="info-box">
+      <span>❄️ Freeze Authority</span>
+      Disabled
+    </div>
+  </section>
+
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
+    <div class="tokenomics-content">
+      <div class="tokenomics-text">
+        <h3>Token Supply: 1,000,000,000 $HIGHSLOT</h3>
+        <p>
+          No taxes. No BS. Just straight meme energy. Liquidity is locked, minting is disabled,
+          and this bear ain't freezing. Transparent and fair for the ultimate degen high-life. 🚀🔥
+        </p>
+      </div>
+      <img src="highslot3.png" alt="Tokenomics Bear" />
+    </div>
+  </section>
+
+  <section class="socials">
+    <a href="https://x.com/HighSloT1" target="_blank">Twitter / X</a>
+    <a href="https://t.me/+zqJlfEIWlDVmNzE0" target="_blank">Telegram</a>
+  </section>
+
+  <footer>
+    <p>© 2025 HIGHSLOT - $HIGHSLOT. All vibes reserved.</p>
+  </footer>
+
+  <script>
+    function copyContract() {
+      const contract = document.getElementById('contract').getAttribute('data-full');
+      navigator.clipboard.writeText(contract).then(() => {
+        alert('Contract Address Copied!');
+      });
+    }
+  </script>
+</body>
+</html>
